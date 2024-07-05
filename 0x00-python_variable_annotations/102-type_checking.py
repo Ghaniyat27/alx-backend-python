@@ -12,7 +12,7 @@ the output tuple is Tuple
 from typing import Tuple
 
 
-def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
+def zoom_array(lst: Tuple[int, ...], factor: int = 2) -> List[int]:
     """ Change the annotation for 1st and return the type
         to Tuple
         to indicate that the function accepts and
@@ -21,10 +21,11 @@ def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
         Lastly, change the float value to interger
         when calling zoom_array
     """
-    zoomed_in: Tuple = tuple(
+    
+    zoomed_in: List[int] = [
         item for item in lst
         for i in range(factor)
-    )
+    ]
     return zoomed_in
 
 
