@@ -21,7 +21,7 @@ def zoom_array(lst: Tuple[int, ...], factor: int = 2) -> List[int]:
         Lastly, change the float value to interger
         when calling zoom_array
     """
-    
+
     zoomed_in: List[int] = [
         item for item in lst
         for i in range(factor)
